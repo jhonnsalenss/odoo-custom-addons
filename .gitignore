@@ -50,11 +50,12 @@ package.json
 
 # add
 
-/odoo/.github
-/odoo/.tx
-/odoo/addons
-/odoo/debian
-/odoo/doc
-/odoo/odoo
-/odoo/setup
-/aux
+odoo/.github/*
+odoo/.tx/*
+odoo/addons/*
+odoo/debian/*
+odoo/doc/*
+odoo/odoo/*
+odoo/setup/*
+aux
+.DS_Store
