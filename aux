@@ -1,0 +1,91 @@
+- ## Nueva instalacion usando git  
+-  
+  ```
+  $ git clone https://github.com/odoo/odoo.git
+  $ sudo apt install python3 python3-pip
+  $ sudo apt install postgresql postgresql-client
+#  $ sudo -u postgres createuser -s $USER
+#  $ createdb $USER
+  $ sudo apt install python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libtiff5-dev libjpeg62-turbo-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev
+
+#	- python3 odoo-bin --addons-path=addons -d mydb
+	- python3 odoo-bin --addons-path addons,custom_addons -d mydb  
+
+  $ cd odoo
+  $ pip3 install setuptools wheel
+  $ pip3 install -r requirements.txt
+  $ sudo mkdir custom_addons
+  $ sudo chmod 755 custom_addons
+  ```
+- Archivos importantes  
+	- odoo.conf (copiar desde directorio debian a raiz)  
+- ### Configurar odoo.conf  
+	- db_host = localhost  
+	- db_port = 5432  
+	- db_user = odoo
+	- db_password = odoo  
+	- addons_path = /home/vagrant/odoo/addons,/home/vagrant/odoo/custom_addons  
+
+
+
+- ### Crear usuario postres
+```
+$ sudo su postgres
+$ createuser --createdb --username postgres --no-createrole --no-superuser --pwprompt vagrant
+
+```
+
+- ### Iniciar servidor 
+	- python3 odoo-bin -c odoo.conf -d mydb
+	- ./odoo-bin -c odoo.conf -d mydb1
+- ### url  
+	- http://localhost:8069  
+	- user: admin  
+	- password: admin  
+- ## modulos  
+-  
+  ```
+  $ ./odoo-bin scaffold reto custom_addons/
+  $ cd reto
+  $ mkdir static
+  
+  ```
+-  
+
+
+Git
+
+$ git init
+$ git remote add origin git@github.com:jhonnsalenss/<repositorio-name>.git
+$ git pull origin master
+$ git add .
+$ git commit -m "first commit"
+$ git push -u origin master
+
+
+http://192.168.56.10:8069/website/configurator
+
+https://www.odoo.com/documentation/15.0/administration/install/install.html
+https://www.odoo.com/documentation/15.0/administration/odoo_sh/getting_started/first_module.html
+https://www.odoo.com/documentation/15.0/developer/howtos/website.html
+odoo 15 website loging redirect
+https://www.odoo.com/es_ES/forum/ayuda-1/how-to-redirect-to-a-specific-url-after-successful-login-152629
+https://www.youtube.com/watch?v=coZVxXypsUQ
+
+
+Intalar sale
+Instalar Modulo website
+
+
+- Antes de empezar tienes que hacer 2 cosas:  
+	- Crear un repositorio de GitHub y añadir a teloconf como invitado de ese repositorio  
+	- Buscar un programa que te permita grabar tu pantalla y comprobar que el audio/captura de pantalla funcionen correctamente.  
+	    
+	  El tiempo estimado es de 2-3h. Si lo haces en menos tiempo está bien y si te lleva un poco más puedes continuar. No estarás descartado por ello.  
+	- En este enlace [https://www.odoo.com/documentation/15.0/administration/install/install.html](https://www.odoo.com/documentation/15.0/administration/install/install.html) tienes la forma de instalar Odoo. Tienes varias maneras. Una de ellas es por Git. Esa es la que queremos que uses.  
+	- Instala y ejecutar correctamente en tu máquina Odoo 15.0  
+	- Crea un módulo personalizado para Odoo  
+	- Tu módulo tiene que añadir una ruta personalizada a la que se pueda acceder desde localhost:8069/reto que imprima un texto HTML. Si estás loqueado verás Hello {nombreDelUsuario}. Si no estás loqueado verás Hello World!  
+
+
+

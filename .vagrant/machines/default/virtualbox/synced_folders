@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/odoo":{"guestpath":"/home/vagrant/odoo","hostpath":"/Users/jons/Documents/workspace/vagrant/debian11/odoo","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/jons/Documents/workspace/vagrant/debian11","disabled":false,"__vagrantfile":true}}}
